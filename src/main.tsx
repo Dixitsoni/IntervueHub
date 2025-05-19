@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import AppRoutes from './routes/routes'
@@ -11,7 +11,9 @@ import { BrowserRouter } from 'react-router-dom';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <AppRoutes />
+      <Suspense>
+        <AppRoutes />
+      </Suspense>
     </BrowserRouter>
   </StrictMode>,
 )
