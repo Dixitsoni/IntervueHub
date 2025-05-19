@@ -37,7 +37,7 @@ const AppRoutes: React.FC = () => {
       <Route
         path="/login"
         element={
-          <PublicRoute allowedRoles={[]} >
+          <PublicRoute>
             <Login />
           </PublicRoute>
         }
@@ -45,7 +45,7 @@ const AppRoutes: React.FC = () => {
       <Route
         path="/signup"
         element={
-          <PublicRoute allowedRoles={[]} >
+          <PublicRoute>
             <Signup />
           </PublicRoute>
         }

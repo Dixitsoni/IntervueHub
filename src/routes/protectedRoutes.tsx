@@ -9,6 +9,10 @@ interface ProtectedRouteProps {
   children: React.ReactNode;
 }
 
+interface PublicRouteProps {
+  children: React.ReactNode;
+}
+
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ allowedRoles, children }) => {
   const user = getCurrentUser();
 
@@ -23,7 +27,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ allowedRoles, ch
   return <>{children}</>;
 };
 
-export const PublicRoute: React.FC<ProtectedRouteProps> = ({ allowedRoles, children }) => {
+export const PublicRoute: React.FC<PublicRouteProps> = ({  children }) => {
   const user = getCurrentUser();
 
   if (user) {
