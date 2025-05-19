@@ -11,7 +11,7 @@ const AppRoutes: React.FC = () => {
   return (
     <Routes>
       <Route
-        path="/admin"
+        path="/"
         element={
           < ProtectedRoute allowedRoles={['admin']} >
             <AdminDashboard />
